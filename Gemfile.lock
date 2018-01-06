@@ -46,6 +46,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord (>= 4.0)
+  activesupport
   bizongo_validators!
   bundler (~> 1.16)
   rake (~> 10.0)
