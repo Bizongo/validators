@@ -28,7 +28,6 @@ module BizongoValidators
 
     module ClassMethods
       def contact_number_column_name(name)
-        binding.pry
         self.contact_field = name
       end
     end
