@@ -1,15 +1,13 @@
-# BizongoValidators
+# Validators
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/bizongo_validators`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem contains validators for some commonly used fields like contact number. It implements the validations at the model level by creating concerns for the same.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'bizongo_validators'
+gem 'validators'
 ```
 
 And then execute:
@@ -18,18 +16,16 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install bizongo_validators
+    $ gem install validators
 
 ## Usage
 
-TODO: Write usage instructions here
+Currently, only one validator has been added which validates contact numbers. The validator extends `ActiveSupport::Concern` and can be used by following two steps:
 
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+1. Include `Validators::ContactNumberValidator` in the model which contains the contact number field as `include Validators::ContactNumberValidator`
+2. Specify the name of the column in which the contact number is stored as `contact_number_column_name <symbolic representation of the column name containing contact numbers>` <br/>
+For example: `contact_number_column_name :contact_number` where `contact_number` is the name of the field that contains contact numbers.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/bizongo_validators.
+Bug reports and pull requests are welcome on GitHub at https://github.com/Bizongo/validators.

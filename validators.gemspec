@@ -1,11 +1,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "bizongo_validators/version"
+require "validators/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "bizongo_validators"
-  spec.version       = BizongoValidators::VERSION
+  spec.name          = "validators"
+  spec.version       = Validators::VERSION
   spec.authors       = ["Anuj Khandelwal"]
   spec.email         = ["khandelwal.anuj14@gmail.com"]
 
@@ -29,7 +29,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.16"
+  spec.add_development_dependency "bundler", "~> 1.15.0"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "activerecord", ">= 4.0"
