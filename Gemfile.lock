@@ -47,10 +47,10 @@ PLATFORMS
 DEPENDENCIES
   activerecord (>= 4.0)
   activesupport
-  validators!
-  bundler (~> 1.16)
+  bundler (~> 1.15.0)
   rake (~> 10.0)
   rspec (~> 3.0)
+  validators!
 
 BUNDLED WITH
    1.16.1
