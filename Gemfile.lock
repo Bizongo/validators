@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bizongo_validators (0.1.0)
+    validators (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -47,7 +47,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord (>= 4.0)
   activesupport
-  bizongo_validators!
+  validators!
   bundler (~> 1.16)
   rake (~> 10.0)
   rspec (~> 3.0)

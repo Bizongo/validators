@@ -1,6 +1,6 @@
-RSpec.describe BizongoValidators do
+RSpec.describe Validators do
   it "has a version number" do
-    expect(BizongoValidators::VERSION).not_to be nil
+    expect(Validators::VERSION).not_to be nil
   end
 
   it "does something useful" do

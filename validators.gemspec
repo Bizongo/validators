@@ -1,11 +1,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "bizongo_validators/version"
+require "validators/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "bizongo_validators"
-  spec.version       = BizongoValidators::VERSION
+  spec.name          = "validators"
+  spec.version       = Validators::VERSION
   spec.authors       = ["Anuj Khandelwal"]
   spec.email         = ["khandelwal.anuj14@gmail.com"]
 

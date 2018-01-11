@@ -1,6 +1,6 @@
 require 'active_record'
 
-module BizongoValidators
+module Validators
   module ContactNumberValidator
     extend ActiveSupport::Concern
 
