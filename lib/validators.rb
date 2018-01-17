@@ -1,2 +1,2 @@
 require "validators/version"
-require "'validators/contact_number_validator'"
+require "validators/contact_number_validator"
