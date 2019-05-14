@@ -16,7 +16,7 @@ module ContactNumberValidator
     end
 
     def validate_contact_number
-      errors.add(self.contact_field, " is not valid") if !self[contact_field].match(/^\+91[789][0-9]{9}/)
+      errors.add(self.contact_field, " is not valid") if !self[contact_field].match(/^\+91[6789][0-9]{9}/)
     end
 
     def contact_number_present
