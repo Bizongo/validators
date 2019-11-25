@@ -14,10 +14,19 @@ module ContactNumberValidator
     private
 
     def format_contact_number
+      country = self[country_details]
+      if country.present? and country['countrySortName'].present?
+        return
+      end
       self[contact_field] = "+91#{self[contact_field]}" if !self[contact_field].starts_with?("+91")
     end
 
     def validate_indian_contact_number
+      country = self[country_details]
+      if country.present? and country['countrySortName'].present?
+        errors.add(self.contact_field, " is not valid") if !self[contact_field].match(/^[6789][0-9]{9}/)
+        return
+      end
       errors.add(self.contact_field, " is not valid") if !self[contact_field].match(/^\+91[6789][0-9]{9}/)
     end
 
