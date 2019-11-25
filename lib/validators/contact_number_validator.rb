@@ -51,7 +51,7 @@ module ContactNumberValidator
   end
 
   module ClassMethods
-    def contact_number_column_name(name, mobile_number_country_details)
+    def contact_number_column_name(name, mobile_number_country_details = nil)
       self.contact_field = name
       self.country_details = mobile_number_country_details
     end
