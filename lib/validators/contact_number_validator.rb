@@ -27,10 +27,11 @@ module ContactNumberValidator
         errors.add(self.contact_field, " is not valid") if !self[contact_field].match(/^[6789][0-9]{9}/)
         return
       end
-      errors.add(self.contact_field, " is not valid") if !self[contact_field].match(/^\+91[6789][0-9]{9}/)
+      errors.add(self.contact_field, " is not valid") if !self[  contact_field].match(/^\+91[6789][0-9]{9}/)
     end
 
     def validate_international_contact_number
+      return if self[contact_field].blank?
       country = self[country_details]["countrySortName"]
       errors.add(self.contact_field, " is not valid") unless Phonelib.valid_for_country? self[contact_field], country
     end
